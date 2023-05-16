@@ -18,7 +18,7 @@ const getUsers = (req, res) => {
   }
   
     database
-        .query("select * from users")
+        .query(sql, sqlValues)
         .then(([users]) => {
             res.status(200).json(users);
         })
